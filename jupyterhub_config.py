@@ -122,7 +122,7 @@ c.JupyterHub.hub_port = os.environ.get('PORT', 8081)
 c.KubeSpawner.hub_connect_ip = 'hub'
 
 # Authenticate users with local
-c.JupyterHub.authenticator_class = 'nativeauthenticator.NativeAuthenticator'
+c.JupyterHub.authenticator_class = 'naasauthenticator.NaasAuthenticator'
 c.Authenticator.check_common_password = True
 c.Authenticator.minimum_password_length = 10
 
