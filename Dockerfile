@@ -12,6 +12,6 @@ RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     jupyter_enterprise_gateway \
     jupyterhub-kubespawner==$SPAWNERKB_VERSION && \
     cd /home && \
-    git clone -b dev https://github.com/jupyter-naas/authenticator.git && \
+    git clone https://github.com/jupyter-naas/authenticator.git && \
     cd authenticator && \
     pip install -e . 
