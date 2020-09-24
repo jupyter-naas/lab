@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:1.1.0
+FROM jupyterhub/jupyterhub:1.2
 ENV SPAWNERDK_VERSION=0.11.1
 ENV SPAWNERKB_VERSION=0.12.0 
 ENV TZ=Europe/Paris
