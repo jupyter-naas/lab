@@ -5,6 +5,8 @@ ENV TZ=Europe/Paris
 
 COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
+COPY naas_logo.svg /srv/jupyterhub/naas_logo.svg
+
 # Install dockerspawner
 RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     pip install --no-cache-dir psycopg2-binary \

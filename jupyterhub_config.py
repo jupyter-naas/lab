@@ -15,6 +15,7 @@ c.NotebookApp.ResourceUseDisplay.cpu_warning_threshold = 0.1
 
 # Spawn single-user servers as Docker containers
 c.JupyterHub.spawner_class = 'kubespawner.KubeSpawner'
+c.JupyterHub.logo_file = "/srv/jupyterhub/naas_logo.svg"
 c.JupyterHub.service_tokens = {
     'secret-token': os.environ.get('ADMIN_API_TOKEN', 'SHOULD_BE_CHANGED'),
 }
