@@ -10,7 +10,7 @@ COPY naas_fav.svg /srv/jupyterhub/naas_fav.svg
 
 # Install dockerspawner
 RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
-    pip install --no-cache-dir psycopg2-binary \
+    pip install --use-feature=2020-resolver --no-cache-dir psycopg2-binary \
     dockerspawner==$SPAWNERDK_VERSION \
     jupyter_enterprise_gateway \
     jupyterhub-kubespawner==$SPAWNERKB_VERSION && \
