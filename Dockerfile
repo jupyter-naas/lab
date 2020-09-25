@@ -1,5 +1,6 @@
 FROM jupyterhub/jupyterhub:1.2
 ENV SPAWNERDK_VERSION=0.11.1
+ENV HUB_VERSION=1.1.0
 ENV SPAWNERKB_VERSION=0.12.0 
 ENV TZ=Europe/Paris
 
@@ -12,6 +13,7 @@ COPY naas_fav.svg /srv/jupyterhub/naas_fav.svg
 RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     pip install --use-feature=2020-resolver --no-cache-dir psycopg2-binary \
     dockerspawner==$SPAWNERDK_VERSION \
+    jupyterhub==$HUB_VERSION \
     jupyter_enterprise_gateway \
     jupyterhub-kubespawner==$SPAWNERKB_VERSION && \
     cd /home && \
