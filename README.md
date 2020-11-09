@@ -1,2 +1,4 @@
-# lab
-jupyter lab for naas
+# Lab
+🪐 Jupyter lab image for naas
+
+It feature our custom authenticator
