@@ -21,3 +21,5 @@ RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     git clone https://github.com/jupyter-naas/authenticator.git && \
     cd authenticator && \
     pip install -e . 
+
+COPY ./kernelspecs/python_kubernetes /usr/local/share/jupyter/kernels/python_kubernetes
