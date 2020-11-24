@@ -48,6 +48,35 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
         if name.startswith('KERNEL_'):
             keywords[name.lower()] = yaml.safe_load(value)
 
+
+    keywords['kernel_volume_mounts'] = [
+        {
+            'name': 'nfs-root',
+            'mountPath': '/home/ftp',
+            'subPath': '{0}/ftpusers/{1}'.format(keywords['kernel_namespace'], keywords['kernel_username'])
+        },
+        {
+            'name': 'nfs-root',
+            'mountPath': '/home/ftp/_awesome-notebooks',
+            'subPath': '{0}/shared/_awesome-notebooks'.format(keywords['kernel_namespace'])
+        },
+        {
+            'name': 'nfs-root',
+            'mountPath': '/home/ftp/_get-started',
+            'subPath': '{0}/shared/_get-started'.format(keywords['kernel_namespace'])
+        },
+    ]   
+
+    keywords['kernel_volumes'] = [
+            {
+                'name': 'nfs-root',
+                'nfs': {
+                    'server': 'fs-b87bd009.efs.eu-west-3.amazonaws.com',
+                    'path': '/'
+                }
+            }
+        ]
+
     # Substitute all template variable (wrapped with {{ }}) and generate `yaml` string.
     k8s_yaml = generate_kernel_pod_yaml(keywords)
 
