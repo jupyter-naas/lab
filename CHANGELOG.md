@@ -1,5 +1,46 @@
-## 2.1.1b0 (2020-11-17)
+## 2.7.1 (2020-11-24)
 
+### Fix
+
+- make kernel mounted folder readOnly
+
+## 2.7.0 (2020-11-24)
+
+### Feat
+
+- Update kernel.json and launch_kubernetes.py to use variables from singleuser
+
+## 2.6.0 (2020-11-24)
+
+### Feat
+
+- add JUPYTER_SERVER_ROOT, JUPYTERHUB_USER and JUPYTERHUB_API_TOKEN
+
+## 2.5.0 (2020-11-24)
+
+### Feat
+
+- Add environment variables to Kernel execution.
+
+## 2.4.0 (2020-11-24)
+
+### Feat
+
+- Update launch_kubernetes.py to mount EFS volume for users
+
+## 2.3.0 (2020-11-24)
+
+### Feat
+
+- Update kernel image used for enterprise-gateway
+
+## 2.2.0 (2020-11-23)
+
+### Feat
+
+- add kernel folder
+
+## 2.1.1b0 (2020-11-17)
 ## 2.1.1 (2020-11-16)
 
 ## 2.1.0 (2020-11-09)
