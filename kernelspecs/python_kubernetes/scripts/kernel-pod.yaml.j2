@@ -52,6 +52,9 @@ spec:
       value: "{{ kernel_id }}"
     - name: KERNEL_NAMESPACE
       value: "{{ kernel_namespace }}"
+    {% for extra in extra_env %}
+    - {{ extra }}
+    {% endfor %}
     image: "{{ kernel_image }}"
     name: "{{ kernel_pod_name }}"
     {% if kernel_working_dir is defined %}

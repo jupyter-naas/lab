@@ -48,6 +48,25 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
         if name.startswith('KERNEL_'):
             keywords[name.lower()] = yaml.safe_load(value)
 
+    keywords['extra_env'] = [
+        {'name': 'JUPYTERHUB_URL', 'value': os.environ.get('JUPYTERHUB_URL', '')},
+        {'name': 'BOBAPP_API', 'value': os.environ.get('BOBAPP_API', '')},
+        {'name': 'NOTIFICATIONS_API', 'value': os.environ.get('NOTIFICATIONS_API', '')},
+        {'name': 'GSHEETS_API', 'value': os.environ.get('GSHEETS_API', '')},
+        {'name': 'CITYFALCON_KEY', 'value': os.environ.get('CITYFALCON_KEY', '')},
+        {'name': 'APINEW_KEY', 'value': os.environ.get('APINEW_KEY', '')},
+        {'name': 'SCREENSHOT_API', 'value': os.environ.get('SCREENSHOT_API', '')},
+        {'name': 'NAAS_SENTRY_DSN', 'value': os.environ.get('NAAS_SENTRY_DSN', '')},
+        {'name': 'PUBLIC_PROXY_API', 'value': os.environ.get('PUBLIC_PROXY_API', '')},
+        {'name': 'PUBLIC_HC_API', 'value': os.environ.get('PUBLIC_HC_API', '')},
+        {'name': 'TC_API_SCREENSHOT', 'value': os.environ.get('TC_API_SCREENSHOT', '')},
+        {'name': 'ALLOWED_IFRAME', 'value': os.environ.get('ALLOWED_IFRAME', '')},
+        {'name': 'JUPYTERHUB_API_URL', 'value': os.environ.get('JUPYTERHUB_API_URL', '')},
+        {'name': 'TZ', 'value': os.environ.get('TZ', '')},
+        # {'name': 'JUPYTER_SERVER_ROOT', 'value': os.environ.get('JUPYTER_SERVER_ROOT', '')},
+        # {'name': 'JUPYTERHUB_USER', 'value': os.environ.get('JUPYTERHUB_USER', '')},
+        # {'name': 'JUPYTERHUB_API_TOKEN', 'value': os.environ.get('JUPYTERHUB_API_TOKEN', '')}
+    ]
 
     keywords['kernel_volume_mounts'] = [
         {
