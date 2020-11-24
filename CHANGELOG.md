@@ -1,3 +1,9 @@
+## 2.7.0 (2020-11-24)
+
+### Feat
+
+- Update kernel.json and launch_kubernetes.py to use variables from singleuser
+
 ## 2.6.0 (2020-11-24)
 
 ### Feat
