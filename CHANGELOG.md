@@ -1,3 +1,9 @@
+## 2.7.1 (2020-11-24)
+
+### Fix
+
+- make kernel mounted folder readOnly
+
 ## 2.7.0 (2020-11-24)
 
 ### Feat
