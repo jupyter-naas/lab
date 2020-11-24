@@ -63,9 +63,9 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
         {'name': 'ALLOWED_IFRAME', 'value': os.environ.get('ALLOWED_IFRAME', '')},
         {'name': 'JUPYTERHUB_API_URL', 'value': os.environ.get('JUPYTERHUB_API_URL', '')},
         {'name': 'TZ', 'value': os.environ.get('TZ', '')},
-        # {'name': 'JUPYTER_SERVER_ROOT', 'value': os.environ.get('JUPYTER_SERVER_ROOT', '')},
-        # {'name': 'JUPYTERHUB_USER', 'value': os.environ.get('JUPYTERHUB_USER', '')},
-        # {'name': 'JUPYTERHUB_API_TOKEN', 'value': os.environ.get('JUPYTERHUB_API_TOKEN', '')}
+        {'name': 'JUPYTER_SERVER_ROOT', 'value': os.environ.get('JUPYTER_SERVER_ROOT', '')},
+        {'name': 'JUPYTERHUB_USER', 'value': os.environ.get('JUPYTERHUB_USER', '')},
+        {'name': 'JUPYTERHUB_API_TOKEN', 'value': os.environ.get('JUPYTERHUB_API_TOKEN', '')}
     ]
 
     keywords['kernel_volume_mounts'] = [
