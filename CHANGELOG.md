@@ -1,3 +1,9 @@
+## 2.8.0b0 (2020-11-24)
+
+### Feat
+
+- Remove /usr/local/share/jupyter/kernels/python3
+
 ## 2.7.1 (2020-11-24)
 
 ### Fix
