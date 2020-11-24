@@ -1,3 +1,9 @@
+## 2.6.0 (2020-11-24)
+
+### Feat
+
+- add JUPYTER_SERVER_ROOT, JUPYTERHUB_USER and JUPYTERHUB_API_TOKEN
+
 ## 2.5.0 (2020-11-24)
 
 ### Feat
