@@ -3,7 +3,7 @@ ENV SPAWNERDK_VERSION=0.11.1
 ENV HUB_VERSION=1.2.1
 ENV SPAWNERKB_VERSION=0.12.0 
 ENV TZ=Europe/Paris
-ENV VERSION=2.0.0
+ENV VERSION=2.8.0b0
 
 COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
