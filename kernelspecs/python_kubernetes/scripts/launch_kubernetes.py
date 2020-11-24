@@ -78,13 +78,13 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
             'name': 'nfs-root',
             'mountPath': '/home/ftp/_awesome-notebooks',
             'subPath': '{0}/shared/_awesome-notebooks'.format(keywords['kernel_namespace']),
-            'readOnly': true
+            'readOnly': 'true'
         },
         {
             'name': 'nfs-root',
             'mountPath': '/home/ftp/_get-started',
             'subPath': '{0}/shared/_get-started'.format(keywords['kernel_namespace']),
-            'readOnly': true
+            'readOnly': 'true'
         },
     ]
 
