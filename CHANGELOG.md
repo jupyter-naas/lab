@@ -1,3 +1,9 @@
+## 2.4.0 (2020-11-24)
+
+### Feat
+
+- Update launch_kubernetes.py to mount EFS volume for users
+
 ## 2.3.0 (2020-11-24)
 
 ### Feat
