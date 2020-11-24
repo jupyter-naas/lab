@@ -63,9 +63,9 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
         {'name': 'ALLOWED_IFRAME', 'value': os.environ.get('ALLOWED_IFRAME', '')},
         {'name': 'JUPYTERHUB_API_URL', 'value': os.environ.get('JUPYTERHUB_API_URL', '')},
         {'name': 'TZ', 'value': os.environ.get('TZ', '')},
-        {'name': 'JUPYTER_SERVER_ROOT', 'value': os.environ.get('JUPYTER_SERVER_ROOT', '')},
-        {'name': 'JUPYTERHUB_USER', 'value': os.environ.get('JUPYTERHUB_USER', '')},
-        {'name': 'JUPYTERHUB_API_TOKEN', 'value': os.environ.get('JUPYTERHUB_API_TOKEN', '')}
+        {'name': 'JUPYTER_SERVER_ROOT', 'value': os.environ.get('KERNEL_JUPYTER_SERVER_ROOT', '')},
+        {'name': 'JUPYTERHUB_USER', 'value': os.environ.get('KERNEL_JUPYTERHUB_USER', '')},
+        {'name': 'JUPYTERHUB_API_TOKEN', 'value': os.environ.get('KERNEL_JUPYTERHUB_API_TOKEN', '')}
     ]
 
     keywords['kernel_volume_mounts'] = [
@@ -84,7 +84,7 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
             'mountPath': '/home/ftp/_get-started',
             'subPath': '{0}/shared/_get-started'.format(keywords['kernel_namespace'])
         },
-    ]   
+    ]
 
     keywords['kernel_volumes'] = [
             {
@@ -130,7 +130,7 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
 
 if __name__ == '__main__':
     """
-        Usage: launch_kubernetes_kernel 
+        Usage: launch_kubernetes_kernel
                     [--RemoteProcessProxy.kernel-id <kernel_id>]
                     [--RemoteProcessProxy.response-address <response_addr>]
                     [--RemoteProcessProxy.spark-context-initialization-mode <mode>]
