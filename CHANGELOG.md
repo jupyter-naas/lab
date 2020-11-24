@@ -1,3 +1,9 @@
+## 2.5.0 (2020-11-24)
+
+### Feat
+
+- Add environment variables to Kernel execution.
+
 ## 2.4.0 (2020-11-24)
 
 ### Feat
