@@ -5,7 +5,7 @@ ENV SPAWNERKB_VERSION=0.12.0
 ENV TZ=Europe/Paris
 ENV VERSION=2.0.0
 
-COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
+COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 COPY naas_logo.svg /srv/jupyterhub/naas_logo.svg
 COPY naas_fav.svg /srv/jupyterhub/naas_fav.svg
@@ -24,3 +24,4 @@ RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
 
 # Kernelspec for enterprise-gateway
 COPY ./kernelspecs/python_kubernetes /usr/local/share/jupyter/kernels/python_kubernetes
+RUN rm -rf /usr/local/share/jupyter/kernels/python3
