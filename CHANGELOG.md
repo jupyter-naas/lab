@@ -1,3 +1,9 @@
+## 2.3.0 (2020-11-24)
+
+### Feat
+
+- Update kernel image used for enterprise-gateway
+
 ## 2.2.0 (2020-11-23)
 
 ### Feat
