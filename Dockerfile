@@ -23,5 +23,4 @@ RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     pip install -e . 
 
 # Kernelspec for enterprise-gateway
-COPY ./kernelspecs/python_kubernetes /usr/local/share/jupyter/kernels/python_kubernetes
-RUN rm -rf /usr/local/share/jupyter/kernels/python3
+COPY ./kernelspecs/ /usr/local/share/jupyter/kernels
