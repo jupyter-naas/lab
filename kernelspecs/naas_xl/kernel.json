@@ -16,7 +16,7 @@
   },
   "argv": [
     "python",
-    "/usr/local/share/jupyter/kernels/python_kubernetes/scripts/launch_kubernetes.py",
+    "/usr/local/share/jupyter/kernels/naas_xl/scripts/launch_kubernetes.py",
     "--RemoteProcessProxy.kernel-id",
     "{kernel_id}",
     "--RemoteProcessProxy.response-address",
