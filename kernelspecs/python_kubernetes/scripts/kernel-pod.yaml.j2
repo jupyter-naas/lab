@@ -71,6 +71,13 @@ spec:
     {% endfor %}
     image: "{{ kernel_image }}"
     name: "{{ kernel_pod_name }}"
+    ressources:
+      requestst:
+        cpu: "250m"
+        memory:"256Mi"
+      limits:
+        cpu: "250m"
+        memory:"256Mi"
     {% if kernel_working_dir is defined %}
     workingDir: "{{ kernel_working_dir }}"
     {% endif %}
