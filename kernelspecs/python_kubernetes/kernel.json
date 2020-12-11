@@ -1,6 +1,6 @@
 {
   "language": "python",
-  "display_name": "Python on Kubernetes",
+  "display_name": "naas - small",
   "metadata": {
     "process_proxy": {
       "class_name": "enterprise_gateway.services.processproxies.k8s.KubernetesProcessProxy",
