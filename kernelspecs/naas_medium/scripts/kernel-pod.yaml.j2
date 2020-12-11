@@ -74,10 +74,10 @@ spec:
     resources:
       requests:
         cpu: "500m"
-        memory:"512Mi"
+        memory: "512Mi"
       limits:
         cpu: "500m"
-        memory:"512Mi"
+        memory: "512Mi"
     {% if kernel_working_dir is defined %}
     workingDir: "{{ kernel_working_dir }}"
     {% endif %}
