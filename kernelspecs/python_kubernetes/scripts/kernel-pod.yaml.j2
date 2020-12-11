@@ -18,6 +18,20 @@ metadata:
     component: kernel
 spec:
   restartPolicy: Never
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: "jupyterNodeGroup"
+          operator: "In"
+          values:
+          - "true"
+  tolerations:
+  - key: "jupyter"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
   serviceAccountName: "{{ kernel_service_account_name }}"
 # NOTE: that using runAsGroup requires that feature-gate RunAsGroup be enabled.
 # WARNING: Only using runAsUser w/o runAsGroup or NOT enabling the RunAsGroup feature-gate
