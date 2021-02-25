@@ -1,3 +1,9 @@
+## 2.8.0 (2021-02-25)
+
+### Feat
+
+- allow only 10 retry wrong password
+
 ## 2.7.1 (2020-11-24)
 
 ### Fix
