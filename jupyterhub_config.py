@@ -126,6 +126,7 @@ c.KubeSpawner.hub_connect_ip = 'hub'
 c.JupyterHub.authenticator_class = 'naasauthenticator.NaasAuthenticator'
 c.Authenticator.check_common_password = True
 c.Authenticator.minimum_password_length = 10
+c.Authenticator.allowed_failed_logins = 10
 
 # Persist hub data on volume mounted inside container
 data_dir = os.environ.get('DATA_VOLUME_CONTAINER', '/data')
