@@ -44,3 +44,9 @@ jobs:
           tags: ${{ steps.prepare.outputs.tag }}
       - name: Image digest
         run: echo ${{ steps.prepare.outputs.tag }}
+      - name: Slack notification
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_AVATAR: repository
+          SLACK_CUSTOM_PAYLOAD: '{"attachments":[{"color":"#47dd82","blocks":[{"type":"section","block_id":"section567","text":{"type":"mrkdwn","text":"<https://github.com/{{ GITHUB_REPOSITORY }}|{{ GITHUB_REPOSITORY }}>\nAvailable to docker hub.\n*Version*\n${{ steps.get_version.outputs.version }}"},"accessory":{"type":"image","image_url":"https://github.com/jupyter-naas/naas/raw/main/custom/naas-fav.png","alt_text":"Naas logo"}}]}]}'
+        uses: Ilshidur/action-slack@2.0.2
