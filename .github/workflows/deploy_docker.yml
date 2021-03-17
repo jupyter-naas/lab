@@ -43,7 +43,27 @@ jobs:
           push: true
           tags: ${{ steps.prepare.outputs.tag }}
       - name: Image digest
-        run: echo ${{ steps.prepare.outputs.tag }}
+        run: echo ${{ steps.prepare.outputs.tag }}      
+      - uses: actions-ecosystem/action-get-latest-tag@v1
+        id: get-latest-tag
+      - name: Checkout Target Repository
+        uses: actions/checkout@v2
+        with:
+          repository: CashStory/cs_confs
+          path: cs_confs
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} 
+      - name: Update Image Version in the related HelmChart values.yaml
+        uses: fjogeleit/yaml-update-action@master
+        with:
+          valueFile: 'galaxy/tools/jupyter/values.yaml'
+          propertyPath: 'jupyter.dockerLabImage'
+          value: 'jupyternaas/lab:${{ steps.get-latest-tag.outputs.tag }}'
+          repository: 'CashStory/cs_confs'
+          branch: main
+          createPR: 'false'
+          message: 'Bump: Naas Version to ${{ steps.get-latest-tag.outputs.tag }}'
+          token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
+          workDir: cs_confs
       - name: Slack notification
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
