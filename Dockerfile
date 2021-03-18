@@ -3,7 +3,8 @@ ENV SPAWNERDK_VERSION=0.11.1
 ENV HUB_VERSION=1.1.0
 ENV SPAWNERKB_VERSION=0.12.0 
 ENV TZ=Europe/Paris
-ENV VERSION=2.0.0
+ENV LAB_VERSION=2.0.0
+ENV AUTH_VERSION=0.3.46
 
 COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
@@ -18,7 +19,7 @@ RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
     jupyter_enterprise_gateway \
     jupyterhub-kubespawner==$SPAWNERKB_VERSION && \
     cd /home && \
-    git clone https://github.com/jupyter-naas/authenticator.git && \
+    git clone -b $AUTH_VERSION --depth 1 https://github.com/jupyter-naas/authenticator.git && \
     cd authenticator && \
     pip install -e . 
 
