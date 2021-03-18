@@ -61,7 +61,7 @@ jobs:
           repository: 'CashStory/cs_confs'
           branch: main
           createPR: 'false'
-          message: 'Bump: Naas Version to ${{ steps.get-latest-tag.outputs.tag }}'
+          message: 'Bump: Lab Version to ${{ steps.get-latest-tag.outputs.tag }}'
           token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
           workDir: cs_confs
       - name: Slack notification
