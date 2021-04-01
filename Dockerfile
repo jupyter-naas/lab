@@ -4,7 +4,7 @@ ENV HUB_VERSION=1.1.0
 ENV SPAWNERKB_VERSION=0.12.0 
 ENV TZ=Europe/Paris
 ENV LAB_VERSION=2.0.0
-ENV AUTH_VERSION=0.3.52
+ENV AUTH_VERSION=0.3.53
 
 COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
