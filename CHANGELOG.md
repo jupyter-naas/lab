@@ -1,3 +1,9 @@
+## 2.10.8 (2021-04-15)
+
+### Fix
+
+- use requirements file for file
+
 ## 2.10.7 (2021-04-02)
 
 ### Fix
