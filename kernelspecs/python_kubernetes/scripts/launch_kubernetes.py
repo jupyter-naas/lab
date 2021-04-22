@@ -50,7 +50,6 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
 
     keywords['extra_env'] = [
         {'name': 'JUPYTERHUB_URL', 'value': os.environ.get('JUPYTERHUB_URL', '')},
-        {'name': 'BOBAPP_API', 'value': os.environ.get('BOBAPP_API', '')},
         {'name': 'NOTIFICATIONS_API', 'value': os.environ.get('NOTIFICATIONS_API', '')},
         {'name': 'GSHEETS_API', 'value': os.environ.get('GSHEETS_API', '')},
         {'name': 'CITYFALCON_KEY', 'value': os.environ.get('CITYFALCON_KEY', '')},
@@ -58,8 +57,6 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
         {'name': 'SCREENSHOT_API', 'value': os.environ.get('SCREENSHOT_API', '')},
         {'name': 'NAAS_SENTRY_DSN', 'value': os.environ.get('NAAS_SENTRY_DSN', '')},
         {'name': 'PUBLIC_PROXY_API', 'value': os.environ.get('PUBLIC_PROXY_API', '')},
-        {'name': 'PUBLIC_HC_API', 'value': os.environ.get('PUBLIC_HC_API', '')},
-        {'name': 'TC_API_SCREENSHOT', 'value': os.environ.get('TC_API_SCREENSHOT', '')},
         {'name': 'ALLOWED_IFRAME', 'value': os.environ.get('ALLOWED_IFRAME', '')},
         {'name': 'JUPYTERHUB_API_URL', 'value': os.environ.get('JUPYTERHUB_API_URL', '')},
         {'name': 'TZ', 'value': os.environ.get('TZ', '')},
@@ -78,13 +75,13 @@ def launch_kubernetes_kernel(kernel_id, response_addr, spark_context_init_mode):
             'name': 'nfs-root',
             'mountPath': '/home/ftp/_awesome-notebooks',
             'subPath': '{0}/shared/_awesome-notebooks'.format(keywords['kernel_namespace']),
-            'readOnly': true
+            'readOnly': True
         },
         {
             'name': 'nfs-root',
             'mountPath': '/home/ftp/_get-started',
             'subPath': '{0}/shared/_get-started'.format(keywords['kernel_namespace']),
-            'readOnly': true
+            'readOnly': True
         },
     ]
 
