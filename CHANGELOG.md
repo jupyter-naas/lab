@@ -1,3 +1,12 @@
+## 2.11.1 (2021-04-29)
+
+### Fix
+
+- update to latest
+- remove useless var
+- change name
+- kernel spec
+
 ## 2.11.0 (2021-04-29)
 
 ### Feat
