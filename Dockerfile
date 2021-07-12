@@ -1,6 +1,6 @@
 FROM jupyterhub/jupyterhub:1.3
 ENV TZ=Europe/Paris
-ENV AUTH_VERSION=dev
+ENV AUTH_VERSION=feature/handle-bearer
 
 COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
