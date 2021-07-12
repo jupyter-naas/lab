@@ -1,3 +1,9 @@
+## 2.11.2b0 (2021-07-12)
+
+### Fix
+
+- **dependency**: Test authenticator feature/handle-bearer
+
 ## 2.11.1 (2021-04-29)
 
 ### Fix
