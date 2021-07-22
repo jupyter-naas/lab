@@ -1,14 +1,20 @@
-## 2.11.2b1 (2021-07-12)
+## 2.11.4 (2021-07-15)
 
 ### Fix
 
-- **dependency**: Use authentication branh feature/handle-bearer
+- **dependency**: update authenticator 0.4.4
 
-## 2.11.2b0 (2021-07-12)
+## 2.11.3 (2021-07-15)
 
 ### Fix
 
-- **dependency**: Test authenticator feature/handle-bearer
+- **dependency**: update authenticator 0.4.3
+
+## 2.11.2 (2021-07-15)
+
+### Fix
+
+- **dependency**: update authenticator 0.4.2
 
 ## 2.11.1 (2021-04-29)
 
