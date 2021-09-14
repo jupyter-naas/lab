@@ -1,3 +1,9 @@
+## 2.11.7 (2021-09-14)
+
+### Fix
+
+- **dependency**: update authenticator 0.7.1
+
 ## 2.11.6 (2021-08-25)
 
 ### Fix
