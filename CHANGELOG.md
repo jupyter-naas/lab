@@ -1,3 +1,27 @@
+## 2.11.8b0 (2021-11-19)
+
+### Fix
+
+- **JupyterHub**: Bump to 1.5.0
+
+## 2.11.5b0 (2021-07-22)
+
+### Fix
+
+- **Dependency**: Bump jupyterhub to 1.4.2
+
+## 2.11.2b1 (2021-07-12)
+
+### Fix
+
+- **dependency**: Use authentication branh feature/handle-bearer
+
+## 2.11.2b0 (2021-07-12)
+
+### Fix
+
+- **dependency**: Test authenticator feature/handle-bearer
+
 ## 2.11.7 (2021-09-14)
 
 ### Fix
