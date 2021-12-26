@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:1.3
+FROM jupyterhub/jupyterhub:1.5
 ENV TZ=Europe/Paris
 ENV AUTH_VERSION=0.7.2
 
