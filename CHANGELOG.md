@@ -1,3 +1,9 @@
+## 2.12.1 (2022-02-07)
+
+### Fix
+
+- Typo for buildx platforms
+
 ## 2.12.0 (2022-02-07)
 
 ### Feat
