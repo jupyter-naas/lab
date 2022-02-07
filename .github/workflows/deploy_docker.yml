@@ -42,7 +42,7 @@ jobs:
         with:
           push: true
           tags: ${{ steps.prepare.outputs.tag }}
-          platform: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64
       - name: Image digest
         run: echo ${{ steps.prepare.outputs.tag }}      
       - uses: actions-ecosystem/action-get-latest-tag@v1
