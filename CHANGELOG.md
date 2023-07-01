@@ -1,3 +1,13 @@
+## 2.13.0 (2023-07-01)
+
+### Feat
+
+- Move naasauthenticator images to the right folder
+
+### Fix
+
+- **dependency**: update authenticator 0.8.3
+
 ## 2.12.1 (2022-02-07)
 
 ### Fix
