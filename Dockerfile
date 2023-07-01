@@ -1,6 +1,6 @@
 FROM jupyterhub/jupyterhub:1.3
 ENV TZ=Europe/Paris
-ENV AUTH_VERSION=0.7.2
+ENV AUTH_VERSION=0.8.3
 
 COPY  jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
