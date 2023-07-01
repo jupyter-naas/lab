@@ -9,7 +9,7 @@ COPY naas_fav.svg /srv/jupyterhub/naas_fav.svg
 COPY requirements.txt /tmp/requirements.txt
 
 # Install dockerspawner
-RUN apt-get update && apt-get -y install git libpq-dev tzdata && \
+RUN apt-get update && apt-get -y install git libpq-dev tzdata kubernetes==19.15.0 && \
     pip install --no-cache-dir -r /tmp/requirements.txt && \
     cd /home && \
     git clone -b $AUTH_VERSION --depth 1 https://github.com/jupyter-naas/authenticator.git && \
