@@ -1,3 +1,9 @@
+## 2.13.1 (2023-07-01)
+
+### Fix
+
+- Layer the installation of authenticator
+
 ## 2.13.0 (2023-07-01)
 
 ### Feat
