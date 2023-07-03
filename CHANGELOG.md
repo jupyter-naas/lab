@@ -1,3 +1,9 @@
+## 2.13.3 (2023-07-03)
+
+### Fix
+
+- **dependency**: update authenticator 0.8.4
+
 ## 2.13.2 (2023-07-01)
 
 ### Fix
